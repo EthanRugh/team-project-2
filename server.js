@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require("express");
 const routes = require("./controllers");
 const sequelize = require("./config/connection");
@@ -10,6 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // turn on routes
 app.use(routes);
+app.use(express.static(path.join(__dirname, 'public')));
 
 sequelize.sync({ force: false }).then(() => {
 	app.listen(PORT, () => console.log("Now listening on Port 3001!"));
