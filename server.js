@@ -16,6 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 // turn on routes routes had to go to the bottom to make it work
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
+app.use(express.static(path.join(__dirname, 'public')));
 
 sequelize.sync({ force: false }).then(() => {
 	app.listen(PORT, () => console.log("Now listening!"));
