@@ -33,7 +33,7 @@ Comment.init(
     {
         sequelize,
         timestamps: false,
-        freezeTableName: true,
+        freezeTableName: false,
         modelName: 'comment'
     }
 );
