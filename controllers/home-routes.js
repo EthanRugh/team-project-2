@@ -24,8 +24,8 @@ router.get('/', (req, res) => {
         }
       ]
     })
-      .then(dbPostData => {
-        // pass a single post object into the homepage template
+      .then(dbRecipeData => {
+        // pass a single recipe object into the homepage template
         res.render('homepage', { Recipe });
       })
       .catch(err => {
