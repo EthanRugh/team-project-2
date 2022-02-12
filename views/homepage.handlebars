@@ -1,14 +1,13 @@
 <ol class="recipe-list">
-    {{#each recipe}}
+    {{#each recipes as |recipe|}}
   <li>
     <article class="recipe">
       <div class="title">
-        <a href="{{recipe_url}}" target="_blank">{{recipe.title}}</a>
+        <a href="{{recipe.recipe_url}}" target="_blank">{{recipe.title}}</a>
         <span>({{recipe.recipe_url}})</span>
       </div>
       <div class="meta">
         {{recipe.vote_count}} point(s) by {{recipe.user.username}}
-        |
         <a href="/recipe/{{recipe.id}}">{{recipe.comments.length}} comment(s)</a>
       </div>
     </article>
