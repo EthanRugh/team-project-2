@@ -10,10 +10,6 @@ const votedata = [
 		recipe_id: 4,
 	},
 	{
-		user_id: 3,
-		recipe_id: 2,
-	},
-	{
 		user_id: 2,
 		recipe_id: 1,
 	},
