@@ -1,31 +1,66 @@
-<!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu Masters</title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
-</head>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Menu Masters</title>
+		{{! <link rel="stylesheet" type="text/css" href="/css/jass.css" /> }}
+		<link rel="stylesheet" type="text/css" href="/css/style.css" />
+	</head>
 
-<body>
-  <div class="wrapper">
-    <header>
-      <h1>
-        <a href="/">Menu Masters</a>
-      </h1>
-      <nav>
-        <a href="/login">Login</a>
-      </nav>
-    </header>
-    <main>
-      {{{ body }}}
-    </main>
-    <footer>
-      Thanks for visiting!
-    </footer>
-  </div>
-
-</body>
+	<body>
+		<header>
+			<h1>Welcome to Menu Masters!</h1>
+			<h2>Where the recipes are mastered for you!</h2>
+		</header>
+		<main>
+			<aside>
+				<a href="/">Home</a>
+				{{#if loggedIn}}
+					<button id="logout" class="btn-no-style">Logout</button>
+				{{else}}
+					<a href="/login">Login</a>
+				{{/if}}
+				<h2>Viewers must sign in to gain access to the recipes!</h2>
+			</aside>
+			<div class="recipes">
+				{{{body}}}
+			</div>
+		</main>
+		{{#if loggedIn}}
+			<script src="/js/logout.js"></script>
+		{{/if}}
+	</body>
 
 </html>
+
+{{!-- <html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Menu Masters</title>
+		<link rel="stylesheet" href="/css/style.css" />
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<header>
+				<h1>
+					<a href="/">Menu Masters</a>
+				</h1>
+				<nav>
+					<a href="/login">Login</a>
+				</nav>
+			</header>
+			<main>
+				{{{body}}}
+			</main>
+			<footer>
+				Thanks for visiting!
+			</footer>
+		</div>
+
+	</body>
+
+</html> --}}

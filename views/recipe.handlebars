@@ -1,0 +1,12 @@
+<article class="recipe">
+	<div class="title">
+		<header>{{title}}</header>
+		<span>({{recipe_text}})</span>
+	</div>
+	<div class="meta">
+		{{recipe.vote_count}}
+		point(s) by
+		{{recipe.user.username}}
+		<a href="/recipe/{{recipe.id}}">{{recipe.comments.length}} comment(s)</a>
+	</div>
+</article>

@@ -76,7 +76,7 @@ router.get("/:id", (req, res) => {
 				res.status(404).json({ message: "No recipe found with this id" });
 				return;
 			}
-			res.json(dbRecipeData);
+			res.render("recipe", { dbRecipeData });
 		})
 		.catch((err) => {
 			console.log(err);
