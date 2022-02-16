@@ -1,0 +1,41 @@
+<section>
+	<div class="">
+		<h2>Create New recipe</h2>
+		<div class="">
+			<form class="">
+				<div class="">
+					<label for="recipe-title">Title</label>
+					<input type="text" id="recipe-title" name="recipe-title" />
+				</div>
+				<div class="">
+					<label for="recipe-text">recipe </label>
+					<input id="recipe-text" name="recipe-text" />
+				</div>
+				<div class="">
+					<button
+						type="submit"
+						class="btn btn-primary btn-lg btn-block"
+					>Create</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>
+
+{{#if recipes.length}}
+<section>
+	<div class="">
+		<h2>Your recipes</h2>
+	</div>
+		<ol>
+			{{#each recipes as |recipe|}}
+			<li>
+			{{> recipe-card recipe}}
+			<a href="/dashboard/edit/{{recipe.id}}" class="edit-link">Edit recipe</a>
+			</li>
+			{{/each}}
+		</ol>
+</section>
+{{/if}}
+
+<script src="/javascript/add-recipe.js"></script>
