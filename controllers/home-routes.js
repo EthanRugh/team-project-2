@@ -23,7 +23,7 @@ router.get("/", (req, res) => {
 		.then((dbRecipeData) => {
 			const recipes = dbRecipeData.map((recipe) => recipe.get({ plain: true }));
 			// pass a single recipe object into the homepage template
-			res.render("homepage", { recipes });
+			res.render("homepage", { recipes, loggedIn: req.session.loggedIn });
 		})
 		.catch((err) => {
 			console.log(err);
