@@ -39,7 +39,7 @@ router.get("/login", (req, res) => {
 	res.render("login");
 });
 
-router.get("/:id", (req, res) => {
+router.get("/recipes/:id", (req, res) => {
 	Recipe.findOne({
 		where: {
 			id: req.params.id,
