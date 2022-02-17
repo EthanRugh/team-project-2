@@ -4,7 +4,7 @@ async function commentFormHandler(event) {
 	const comment_text = document
 		.querySelector('textarea[name="comment-body"]')
 		.value.trim();
-	const recipe_id = window.location.toString().split("/")[
+	const post_id = window.location.toString().split("/")[
 		window.location.toString().split("/").length - 1
 	];
 
@@ -19,8 +19,8 @@ async function commentFormHandler(event) {
 				"Content-Type": "application/json",
 			},
 		});
+
 		if (response.ok) {
-			console.log(recipe_id);
 			document.location.reload();
 		} else {
 			alert(response.statusText);

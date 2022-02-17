@@ -1,14 +1,15 @@
 
-<section>
+<section class="banjo">
 	<div class="">
-		<h2>Create New recipe</h2>
+		<h2 class="fiddle">Create New recipe</h2>
 		<div class="">
-			<form class="new-recipe-form">
+			<form class="">
 				<div class="">
 					<label for="recipe-title">Title</label>
 					<input type="text" id="recipe-title" name="recipe-title" />
 				</div>
 				<div class="">
+
 					<label for="recipe-text">recipe </label>
 					<input id="recipe-text" name="recipe-text" />
 				</div>
@@ -18,6 +19,23 @@
 				<div class="">
 					<button type="submit" class="btn btn-primary btn-lg btn-block">Create</button>
 				</div>
+<html>
+  <head></head>
+  <body>
+    <input type="file" />
+    <div class="controls">
+      <button id="resume">Upload</button>
+    </div>
+    {{!-- <div>Progress: <span id="progress"></span></div> --}}
+    <script src="//static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
+  </body>
+</html>
+				{{!-- <div class="">
+					<button
+						type="submit"
+						class="btn btn-primary btn-lg btn-block"
+					>Create</button>
+				</div> --}}
 			</form>
 		</div>
 	</div>
@@ -25,18 +43,25 @@
 
 {{#if recipes.length}}
 <section>
-	<div class="">
+	<div class="fiddle">
 		<h2>Your recipes</h2>
 	</div>
-	<ol>
-		{{#each recipes as |recipe|}}
-		<li>
+		<ol>
+			{{#each recipes as |recipe|}}
+			<li>
 			{{> recipe-card recipe}}
-			<a href="/dashboard/edit/{{recipe.id}}" class="edit-link">Edit recipe</a>
-		</li>
-		{{/each}}
-	</ol>
+			<a href="/dashboard/edit/{{recipe.id}}" class="edit-link btn">Edit recipe</a>
+			</li>
+			{{/each}}
+		</ol>
 </section>
 {{/if}}
+
 <script type="text/javascript" src="https://static.filestackapi.com/v3/filestack-0.6.3.js"></script>
+<<<<<<< HEAD
 <script src="/javascript/add-recipe.js"></script>
+=======
+{{!-- <script src="//static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script> --}}
+<script src="/javascript/add-recipe.js"></script>
+
+>>>>>>> fa082e8815c9dc8bfb189028e4f40e3ff15801aa

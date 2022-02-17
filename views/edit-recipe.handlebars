@@ -1,5 +1,5 @@
 <article>
-	<a href="/dashboard"> &larr; Back to dashboard</a>
+	<a href="/dashboard" class="btn"> &larr; Back to dashboard</a>
 		<h2 class="">
 			Edit Post
 		</h2>
@@ -21,8 +21,8 @@
 				<a href="/recipe/{{recipe.id}}">{{recipe.comments.length}}
 					{{format_plural "comment" recipe.comments.length}}</a>
 			</div>
-			<button type="submit" class="">Save post</button>
-			<button type="button" class="">Delete post</button>
+			<button type="submit" class="save-btn">Save Recipe</button>
+			<button type="button" class="delete-btn">Delete Recipe</button>
 		</form>
 	</div>
 </article>
