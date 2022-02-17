@@ -1,0 +1,46 @@
+<article>
+	<a href="/dashboard"> &larr; Back to dashboard</a>
+		<h2 class="">
+			Edit Post
+		</h2>
+	<div class="">
+
+		<form class="">
+			<div class="">
+				Recipe Title
+				<input name="recipe-title" type="text" value="{{recipe.title}}" />
+			</div>
+			<div class=""> 
+				Post Text
+				<input name="recipe-text" type="text" value="{{recipe.recipe_text}}" />
+			</div>
+			<div class="">
+				by you on
+				{{recipe.created_at}}
+				|
+				<a href="/recipe/{{recipe.id}}">{{recipe.comments.length}}
+					{{format_plural "comment" recipe.comments.length}}</a>
+			</div>
+			<button type="submit" class="">Save post</button>
+			<button type="button" class="">Delete post</button>
+		</form>
+	</div>
+</article>
+
+<div class="">
+	<form class="comment-form">
+		<div class="">
+			<textarea name="comment-body"></textarea>
+		</div>
+
+		<div class="">
+			<button type="submit">add comment</button>
+		</div>
+	</form>
+</div>
+
+{{> comments post.comments}}
+
+<script src="/javascript/edit-recipe.js"></script>
+<script src="/javascript/delete-recipe.js"></script>
+<script src="/javascript/comment.js"></script>
