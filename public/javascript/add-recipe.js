@@ -20,16 +20,16 @@
 // 			});
 // 		});
 
-// 		client
-// 			.upload(files, { onProgress }, {}, token)
-// 			.then((res) => {
-// 				console.log("success: ", res);
-// 			})
-// 			.catch((err) => {
-// 				console.log(err);
-// 			});
-// 	});
-// });
+		client
+			.upload(files, { onProgress }, {}, token)
+			.then((res) => {
+				console.log("success: ", res);
+			})
+			.catch((err) => {
+				console.log(err);
+			});
+	});
+});
 
 async function newFormHandler(event) {
 	event.preventDefault();
