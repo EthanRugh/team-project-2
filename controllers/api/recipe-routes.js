@@ -90,7 +90,7 @@ router.post("/", (req, res) => {
 	Recipe.create({
 		title: req.body.title,
 		recipe_text: req.body.recipe_text,
-		user_id: req.body.user_id,
+		user_id: req.session.user_id,
 	})
 		.then((dbRecipeData) => res.json(dbRecipeData))
 		.catch((err) => {
