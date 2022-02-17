@@ -1,41 +1,47 @@
 
-<section class="banjo">
-	<div class="">
-		<h2 class="fiddle">Create New recipe</h2>
-		<div class="">
-			<form class="new-recipe-form">
-				<div class="">
-					<label for="recipe-title">Title</label>
-					<input type="text" id="recipe-title" name="recipe-title" />
-				</div>
-				<div class="">
-					<label for="recipe-text">Recipe Text</label>
-					<textarea id="recipe-text" name="recipe-text" rows="5" cols="25"></textarea>
+<section class="">
+	<h2 class="">Create New Recipe</h2>
+		<form class="new-recipe-form">
+			<div>
+				<div>
+					<label for="recipe-title">Title:</label>
 				</div>
 				<div>
-					<input type="BUTTON" name="Pick photo" value="Pick photo" id="photoPicker" onclick="openPhotoPicker()">
+					<input type="text" id="recipe-title" name="recipe-title" />
 				</div>
-				<div class="">
-					<button type="submit" class="btn btn-primary btn-lg btn-block">Create</button>
+			</div>
+			<div class="add-recipe-text">
+				<div>
+					<label for="recipe-text">Recipe Text:</label>
 				</div>
-			</form>
-		</div>
-	</div>
+				<div>
+					<textarea id="recipe-text" name="recipe-text" rows="5" cols="25"></textarea>
+				</div>
+			</div>
+			<div class="recipe-buttons">
+				<div>
+					<input type="BUTTON" class="pick-photo-btn" name="Pick photo" value="Pick photo" id="photoPicker" onclick="openPhotoPicker()">
+				</div>
+				<div>
+					<button type="submit" class="create-recipe-btn">Create</button>
+				</div>
+			</div>
+		</form>
 </section>
 
 {{#if recipes.length}}
-<section>
+<section class="recipes">
 	<div class="">
 		<h2>Your recipes</h2>
 	</div>
-	<ol>
-		{{#each recipes as |recipe|}}
-		<li>
-			{{> recipe-card recipe}}
-			<a href="/dashboard/edit/{{recipe.id}}" class="edit-link">Edit recipe</a>
-		</li>
-		{{/each}}
-	</ol>
+	<div class="recipe-list">
+			{{#each recipes as |recipe|}}
+					{{> recipe-card recipe}}
+
+					<a href="/dashboard/edit/{{recipe.id}}" class="edit-recipe-btn">Edit recipe</a>
+
+			{{/each}}
+	</div>
 </section>
 {{/if}}
 <script type="text/javascript" src="https://static.filestackapi.com/v3/filestack-0.6.3.js"></script>
