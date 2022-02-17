@@ -104,12 +104,13 @@ aside a:hover {
 }
 
 .recipes {
-	width: 90%;
-	max-width: 100%;
-	flex-wrap: wrap;
 	flex: 4;
 	background-color: #fff;
-	padding: 15px;
+	padding: 50px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
 }
 
 .btn-no-style {
@@ -207,7 +208,6 @@ img {
 	border-radius: 10px;
 	background-color: var(--light);
 	color: var(--dark);
-	width: 40%;
 }
 
 .login-card {
