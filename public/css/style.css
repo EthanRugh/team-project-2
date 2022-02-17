@@ -8,6 +8,9 @@
 	--error: rgb(228, 46, 1);
 	--border-radius: 0.3rem;
 }
+html {
+	height: 100%;
+}
 
 body {
 	font-family: Arial;
@@ -21,6 +24,8 @@ body {
 a {
 	color: var(--dark);
 	text-decoration: none;
+	display: flex;
+	flex-direction: column;
 }
 
 a:visited {
@@ -128,8 +133,14 @@ aside a:hover {
 }
 
 img {
-	max-width: 100%;
+	max-width: 75%;
 	height: auto;
+	align-self: center;
+}
+
+.title {
+	display: flex;
+	flex-direction: column;
 }
 
 .new-recipe-form {
@@ -140,6 +151,17 @@ img {
 	margin-right: 0;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: x-large;
+}
+
+.edit-recipe-form {
+	display: flex;
+	flex-direction: column;
+	/* float: left; */
+	margin-left: auto;
+	margin-right: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: x-large;
+	align-items: center;
 }
 
 .recipe-list {
@@ -172,6 +194,7 @@ img {
 
 /* Comments */
 .comment-form {
+	display: block;
 	margin-bottom: 5%;
 	margin: auto;
 	border-radius: 15px;
@@ -222,6 +245,14 @@ img {
 }
 
 /* CARDS */
+.big-card {
+	flex: 0 1 300px;
+	border: 7px double var(--dark);
+	border-radius: 10px;
+	background-color: var(--light);
+	color: var(--dark);
+}
+
 .card {
 	margin: 20px;
 	flex: 0 1 300px;
@@ -293,6 +324,21 @@ img {
 	border-radius: var(--border-radius);
 	padding: 9px;
 }
+
+.back-btn {
+	background-color: #9da4e7;
+	color: rgb(248, 248, 248);
+	border: 2px solid #000c77;
+	padding: 5px;
+	transition-duration: 0.4s;
+	font-size: x-large;
+	border-radius: 8px;
+}
+
+.back-btn:hover {
+	background-color: #000c77;
+	color: white;
+}
 .pick-photo-btn {
 	background-color: white;
 	color: black;
@@ -320,6 +366,21 @@ img {
 
 .create-recipe-btn:hover {
 	background-color: #4caf50;
+	color: white;
+}
+
+.delete-recipe-btn {
+	background-color: white;
+	color: black;
+	border: 2px solid #dd0a0a;
+	padding: 5px;
+	transition-duration: 0.4s;
+	font-size: x-large;
+	border-radius: 8px;
+}
+
+.delete-recipe-btn:hover {
+	background-color: #dd0a0a;
 	color: white;
 }
 

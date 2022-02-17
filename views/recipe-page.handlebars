@@ -1,19 +1,21 @@
+
+<section class "recipe-page">
 {{> recipe recipe}}
-
 {{#if loggedIn}}
-<form class="comment-form">
-  <div>
-    <textarea name="comment-body" class="comment-text-box"></textarea>
-  </div>
+  <form class="comment-form">
+    <div>
+      <textarea name="comment-body" class="comment-text-box"></textarea>
+    </div>
 
-  <div>
-    <button type="submit">add comment</button>
-    <button type="button" class="upvote-btn">upvote</button>
-  </div>
-</form>
+    <div>
+      <button type="submit">add comment</button>
+      <button type="button" class="upvote-btn">upvote</button>
+    </div>
+  </form>
 {{/if}}
-
 {{> comments recipe.comments}}
+</section>
+
 
 <script src="/javascript/comment.js"></script>
 <script src="/javascript/upvote.js"></script>

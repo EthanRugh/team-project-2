@@ -7,7 +7,7 @@
 					<label for="recipe-title">Title:</label>
 				</div>
 				<div>
-					<input type="text" id="recipe-title" name="recipe-title" />
+					<input type="text" id="recipe-title" name="recipe-title"/>
 				</div>
 			</div>
 			<div class="add-recipe-text">
@@ -37,7 +37,6 @@
 	<div class="recipe-list">
 			{{#each recipes as |recipe|}}
 					{{> recipe-card recipe}}
-
 					<a href="/dashboard/edit/{{recipe.id}}" class="edit-recipe-btn">Edit recipe</a>
 
 			{{/each}}

@@ -1,45 +1,37 @@
 <article>
-	<a href="/dashboard"> &larr; Back to dashboard</a>
-		<h2 class="">
-			Edit Post
-		</h2>
-	<div class="">
+	<a href="/dashboard" class="back-btn"> &larr; Back to dashboard</a>
+
+	<div class="recipes">
 
 		<form class="edit-recipe-form">
-			<div class="">
-				Recipe Title
+			<h2> Edit Post </h2>
+			<div>
+				<div>
+				Recipe Title:
+				</div>
+				<div>
 				<input name="recipe-title" type="text" value="{{recipe.title}}" />
+				</div>
 			</div>
+			<img src="{{recipe.recipe_url}}" alt="" />
 			<div class=""> 
-				Recipe Text
+				<div>
+				Recipe Text:
+				</div>
+				<div>
 				<textarea name="recipe-text" type="text" value="{{recipe.recipe_text}}"> </textarea>
+				</div>
 			</div>
-			<div class="">
-				by you on
-				|
-				<a href="/recipes/{{recipe.id}}">{{recipe.comments.length}}
-					{{format_plural "comment" recipe.comments.length}}</a>
-			</div>
-			<button type="submit" class="">Save post</button>
+			<div class="recipe-buttons">
+			<button type="submit" class="create-recipe-btn">Save post</button>
 			<button type="button" class="delete-recipe-btn">Delete post</button>
+			</div>
 		</form>
 	</div>
 </article>
 
-<div class="">
-	<form class="comment-form">
-		<div class="">
-			<textarea name="comment-body"></textarea>
-		</div>
-
-		<div class="">
-			<button type="submit">add comment</button>
-		</div>
-	</form>
-</div>
 
 {{> comments post.comments}}
 
 <script src="/javascript/edit-recipe.js"></script>
 <script src="/javascript/delete-recipe.js"></script>
-<script src="/javascript/comment.js"></script>
