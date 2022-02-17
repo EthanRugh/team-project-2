@@ -2,7 +2,7 @@
 	<div class="">
 		<h2>Create New recipe</h2>
 		<div class="">
-			<form class="">
+			<form class="new-recipe-form">
 				<div class="">
 					<label for="recipe-title">Title</label>
 					<input type="text" id="recipe-title" name="recipe-title" />
@@ -11,23 +11,14 @@
 					<label for="recipe-text">recipe </label>
 					<input id="recipe-text" name="recipe-text" />
 				</div>
-<html>
-  <head></head>
-  <body>
-    <input type="file" />
-    <div class="controls">
-      <button id="resume">Upload</button>
-    </div>
-    <div>Progress: <span id="progress"></span></div>
-    <script src="//static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
-  </body>
-</html>
-				{{!-- <div class="">
-					<button
-						type="submit"
-						class="btn btn-primary btn-lg btn-block"
-					>Create</button>
-				</div> --}}
+				<input type="file" />
+				<div class="controls">
+					<button id="resume">Upload</button>
+				</div>
+				<div>Progress: <span id="progress"></span></div>
+				<div class="">
+					<button type="submit" class="btn btn-primary btn-lg btn-block">Create</button>
+				</div>
 			</form>
 		</div>
 	</div>
@@ -38,16 +29,16 @@
 	<div class="">
 		<h2>Your recipes</h2>
 	</div>
-		<ol>
-			{{#each recipes as |recipe|}}
-			<li>
+	<ol>
+		{{#each recipes as |recipe|}}
+		<li>
 			{{> recipe-card recipe}}
 			<a href="/dashboard/edit/{{recipe.id}}" class="edit-link">Edit recipe</a>
-			</li>
-			{{/each}}
-		</ol>
+		</li>
+		{{/each}}
+	</ol>
 </section>
 {{/if}}
 
-
+<script src="//static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
 <script src="/javascript/add-recipe.js"></script>

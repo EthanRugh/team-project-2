@@ -58,7 +58,7 @@ router.get("/edit/:id", withAuth, (req, res) => {
 	})
 		.then((dbRecipeData) => {
 			if (dbRecipeData) {
-				const Recipe = dbRecipeData.get({ plain: true });
+				const recipe = dbRecipeData.get({ plain: true });
 
 				res.render("edit-recipe", {
 					recipe,

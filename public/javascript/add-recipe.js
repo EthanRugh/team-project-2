@@ -31,31 +31,31 @@ window.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
-// async function newFormHandler(event) {
-// 	event.preventDefault();
+async function newFormHandler(event) {
+	event.preventDefault();
 
-// 	const title = document.querySelector('input[name="recipe-title"]').value;
+	const title = document.querySelector('input[name="recipe-title"]').value;
 
-// 	const recipe_text = document.querySelector('input[name="recipe-text"]').value;
+	const recipe_text = document.querySelector('input[name="recipe-text"]').value;
 
-// 	const response = await fetch(`/api/recipes`, {
-// 		method: "POST",
-// 		body: JSON.stringify({
-// 			title,
-// 			recipe_text,
-// 		}),
-// 		headers: {
-// 			"Content-Type": "application/json",
-// 		},
-// 	});
+	const response = await fetch(`/api/recipes`, {
+		method: "POST",
+		body: JSON.stringify({
+			title,
+			recipe_text,
+		}),
+		headers: {
+			"Content-Type": "application/json",
+		},
+	});
 
-// 	if (response.ok) {
-// 		document.location.replace("/");
-// 	} else {
-// 		alert(response.statusText);
-// 	}
-// }
+	if (response.ok) {
+		document.location.reload();
+	} else {
+		alert(response.statusText);
+	}
+}
 
-// document
-// 	.querySelector(".new-recipe-form")
-// 	.addEventListener("submit", newFormHandler);
+document
+	.querySelector(".new-recipe-form")
+	.addEventListener("submit", newFormHandler);
