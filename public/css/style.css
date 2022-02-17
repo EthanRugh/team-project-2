@@ -253,6 +253,16 @@ img {
     padding-left: 100px;
 }
 
+.banjo {
+    border-bottom: 2px solid black;
+}
+
+.fiddle {
+    text-align: center;
+    text-decoration: underline;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.2)
+}
+
 /* LAYOUT */
 .container {
     display: flex;
@@ -273,6 +283,25 @@ img {
     border: 1px solid var(--dark);
     border-radius: var(--border-radius);
 	padding: 9px;
+    box-shadow: 5px 5px 3px grey;
+}
+
+.delete-btn {
+    border: 1px solid var(--dark);
+    border-radius: var(--border-radius);
+	padding: 9px;
+    background-color: red;
+    color: white;
+    box-shadow: 5px 5px 3px grey;
+}
+
+.save-btn {
+    border: 1px solid var(--dark);
+    border-radius: var(--border-radius);
+	padding: 9px;
+    background-color: rgb(5, 202, 5);
+    color: white;
+    box-shadow: 5px 5px 3px grey;
 }
 
 @media screen and (max-width: 980px) {

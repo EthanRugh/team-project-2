@@ -1,6 +1,6 @@
-<section>
+<section class="banjo">
 	<div class="">
-		<h2>Create New recipe</h2>
+		<h2 class="fiddle">Create New recipe</h2>
 		<div class="">
 			<form class="">
 				<div class="">
@@ -8,8 +8,8 @@
 					<input type="text" id="recipe-title" name="recipe-title" />
 				</div>
 				<div class="">
-					<label for="recipe-text">recipe </label>
-					<input id="recipe-text" name="recipe-text" />
+					<label for="recipe-text">Recipe </label>
+					<textarea id="recipe-text" name="recipe-text"></textarea>
 				</div>
 <html>
   <head></head>
@@ -18,7 +18,7 @@
     <div class="controls">
       <button id="resume">Upload</button>
     </div>
-    <div>Progress: <span id="progress"></span></div>
+    {{!-- <div>Progress: <span id="progress"></span></div> --}}
     <script src="//static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
   </body>
 </html>
@@ -35,14 +35,14 @@
 
 {{#if recipes.length}}
 <section>
-	<div class="">
+	<div class="fiddle">
 		<h2>Your recipes</h2>
 	</div>
 		<ol>
 			{{#each recipes as |recipe|}}
 			<li>
 			{{> recipe-card recipe}}
-			<a href="/dashboard/edit/{{recipe.id}}" class="edit-link">Edit recipe</a>
+			<a href="/dashboard/edit/{{recipe.id}}" class="edit-link btn">Edit recipe</a>
 			</li>
 			{{/each}}
 		</ol>
