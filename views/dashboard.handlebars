@@ -1,3 +1,4 @@
+
 <section class="banjo">
 	<div class="">
 		<h2 class="fiddle">Create New recipe</h2>
@@ -8,8 +9,29 @@
 					<input type="text" id="recipe-title" name="recipe-title" />
 				</div>
 				<div class="">
-					<label for="recipe-text">Recipe </label>
-					<textarea id="recipe-text" name="recipe-text"></textarea>
+
+					<label for="recipe-text">recipe </label>
+					<input id="recipe-text" name="recipe-text" />
+				</div>
+
+					<head>
+					<script type="text/javascript" src="https://static.filestackapi.com/v3/filestack-0.6.3.js"></script>
+					</head>
+
+					<body>
+					<input type="BUTTON" name="Pick watermark" value="Pick watermark" id="waterPicker" onclick="openPicker()">
+							<input type="BUTTON" name="Pick photo" value="Pick photo" id="photoPicker" onclick="openPhotoPicker()">
+							<input type="BUTTON" name="Build URL" value="Build URL" id="Build URL" onclick="buildURL()">
+							<input type="BUTTON" name="Store Photo" value="Store Photo" id="Store Photo" onclick="storeWaterMarkedPhoto()">
+							<a id="Download Picture" href="" download> Click Here to Download! </a>
+					</body>
+
+				{{!-- <input type="file" />
+				<div class="controls">
+					<button id="resume">Upload</button>
+				</div> --}}
+				<div class="">
+					<button type="submit" class="btn btn-primary btn-lg btn-block">Create</button>
 				</div>
 <html>
   <head></head>
@@ -49,5 +71,7 @@
 </section>
 {{/if}}
 
-
+<script type="text/javascript" src="https://static.filestackapi.com/v3/filestack-0.6.3.js"></script>
+{{!-- <script src="//static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script> --}}
 <script src="/javascript/add-recipe.js"></script>
+

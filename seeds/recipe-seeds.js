@@ -6,6 +6,7 @@ const recipeData = [
 		recipe_text:
 			"Garden noodles, german sausage, ranch style beans. Put them bad boys in a bowl and enjoy",
 		user_id: 1,
+		recipe_url: "https://cdn.filestackcontent.com/ctQNheulTK2iQ5uPE4tc",
 	},
 	{
 		title: "Single Dude Ramen",
