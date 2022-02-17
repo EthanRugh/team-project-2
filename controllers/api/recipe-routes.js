@@ -11,6 +11,7 @@ router.get("/", (req, res) => {
 			"id",
 			"title",
 			"recipe_text",
+			"recipe_url",
 			[
 				sequelize.literal(
 					"(SELECT COUNT(*) FROM vote WHERE recipe.id = vote.recipe_id)"
@@ -49,6 +50,7 @@ router.get("/:id", (req, res) => {
 			"id",
 			"title",
 			"recipe_text",
+			"recipe_url",
 			[
 				sequelize.literal(
 					"(SELECT COUNT(*) FROM vote WHERE recipe.id = vote.recipe_id)"
@@ -91,6 +93,7 @@ router.post("/", (req, res) => {
 		title: req.body.title,
 		recipe_text: req.body.recipe_text,
 		user_id: req.session.user_id,
+		recipe_url: req.body.recipe_url,
 	})
 		.then((dbRecipeData) => res.json(dbRecipeData))
 		.catch((err) => {

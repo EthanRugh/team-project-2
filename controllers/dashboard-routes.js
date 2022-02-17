@@ -9,7 +9,7 @@ router.get("/", withAuth, (req, res) => {
 			// use the ID from the session
 			user_id: req.session.user_id,
 		},
-		attributes: ["id", "recipe_text", "title"],
+		attributes: ["id", "recipe_text", "title", "recipe_url"],
 		include: [
 			{
 				model: Comment,
@@ -40,7 +40,7 @@ router.get("/", withAuth, (req, res) => {
 
 router.get("/edit/:id", withAuth, (req, res) => {
 	Recipe.findByPk(req.params.id, {
-		attributes: ["id", "recipe_text", "title"],
+		attributes: ["id", "recipe_text", "title", "recipe_url"],
 		include: [
 			{
 				model: Comment,

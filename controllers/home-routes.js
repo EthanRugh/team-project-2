@@ -4,7 +4,7 @@ const { Recipe, User, Comment } = require("../model");
 
 router.get("/", (req, res) => {
 	Recipe.findAll({
-		attributes: ["id", "title", "recipe_text"],
+		attributes: ["id", "title", "recipe_text", "recipe_url"],
 		include: [
 			{
 				model: Comment,
@@ -48,6 +48,7 @@ router.get("/recipes/:id", (req, res) => {
 			"id",
 			"title",
 			"recipe_text",
+			"recipe_url",
 			[
 				sequelize.literal(
 					"(SELECT COUNT(*) FROM vote WHERE recipe.id = vote.recipe_id)"
