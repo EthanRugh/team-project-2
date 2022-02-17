@@ -119,6 +119,7 @@ router.put("/:id", (req, res) => {
 	Recipe.update(
 		{
 			title: req.body.title,
+			recipe_text: req.body.recipe_text,
 		},
 		{
 			where: {

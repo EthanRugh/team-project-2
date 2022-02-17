@@ -5,7 +5,7 @@
 		</h2>
 	<div class="">
 
-		<form class="">
+		<form class="edit-recipe-form">
 			<div class="">
 				Recipe Title
 				<input name="recipe-title" type="text" value="{{recipe.title}}" />
@@ -16,13 +16,12 @@
 			</div>
 			<div class="">
 				by you on
-				{{recipe.created_at}}
 				|
 				<a href="/recipe/{{recipe.id}}">{{recipe.comments.length}}
 					{{format_plural "comment" recipe.comments.length}}</a>
 			</div>
 			<button type="submit" class="">Save post</button>
-			<button type="button" class="">Delete post</button>
+			<button type="button" class="delete-recipe-btn">Delete post</button>
 		</form>
 	</div>
 </article>

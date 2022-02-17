@@ -19,7 +19,9 @@ async function newFormHandler(event) {
 	event.preventDefault();
 
 	const title = document.querySelector('input[name="recipe-title"]').value;
-	const recipe_text = document.querySelector('input[name="recipe-text"]').value;
+	const recipe_text = document.querySelector(
+		'textarea[name="recipe-text"]'
+	).value;
 	const recipe_url = "https://cdn.filestackcontent.com/" + imageHandle;
 
 	const response = await fetch(`/api/recipes`, {
